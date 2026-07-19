@@ -111,3 +111,5 @@ Form fields accepted:
 - `amount` (number, required, must be > 0)
 - `category` (string, optional — if provided, the app will “learn” and store this mapping)
 
+## 📄 License
+This project is licensed under the terms found in the [LICENSE](https://github.com/Rujal-Jiyani/Coinsious-Smart-Expense-Tracker/blob/main/Frontend/LICENSE) file.
