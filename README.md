@@ -17,6 +17,7 @@
 **Coinsious** is a smart expense tracker designed to help you **categorize, analyze, and manage your expenses effortlessly**.  
 It uses **Generative AI** to automatically classify your spending, giving you **personalized insights** into your financial habits.  
 
+Deployment URL: https://coincious-smart-expense.vercel.app/
 ---
 
 ## ✨ Features  
