@@ -17,15 +17,45 @@
 **Coinsious** is a smart expense tracker designed to help you **categorize, analyze, and manage your expenses effortlessly**.  
 It uses **Generative AI** to automatically classify your spending, giving you **personalized insights** into your financial habits.  
 
-Deployment URL: https://coincious-smart-expense.vercel.app/
 ---
 
 ## ✨ Features  
-- 🔍 **AI-Powered Categorization** – Expenses are automatically categorized using **GenAI**.
-- More exciting features are yet to come as we continue improving Coinsious.
+* **Comprehensive Dashboard**: Get a clear overview of your financial health at a glance.
+* **Smart Expense Tracking**: Easily add and categorize your daily expenses.
+* **Group Bill Splitting**: Create groups, add members, track shared expenses, and use the "Settle Up" feature to balance debts seamlessly.
+* **AI Chatbot Assistant**: Ask questions and get smart insights about your spending habits.
+* **Flexible Data Export**: Export your financial data within specific date ranges for external use or record-keeping.
+* **Secure Authentication**: Robust user sign-up, login, and password reset flows.
+* **Notification System**: Stay updated on group activities and pending settlements.
 
-## 📋 Prerequisites  
+## 🛠️ Tech Stack
 
+**Frontend Framework & Build Tools:**
+* [React](https://reactjs.org/) with [TypeScript](https://www.typescriptlang.org/)
+* [Vite](https://vitejs.dev/) - Next-generation frontend tooling
+* [Vitest](https://vitest.dev/) - Blazing fast unit test framework
+
+**Styling & UI:**
+* [Tailwind CSS](https://tailwindcss.com/) & [PostCSS](https://postcss.org/)
+* Modular UI Components (Accordion, Dialogs, Dropdowns, Sheets, etc.)
+
+**Backend & Database:**
+* [Supabase](https://supabase.com/) - Open-source Firebase alternative used for database and user authentication.
+
+**Deployment:**
+* Configured for seamless deployment on [Vercel](https://coincious-smart-expense.vercel.app/).
+
+## 📁 Project Structure Highlights
+
+The application is structured for scalability and maintainability:
+* `/Frontend/src/components/pages/` - Contains the core application views (Dashboard, Groups, Chatbot, Settings, etc.).
+* `/Frontend/src/components/ui/` - Contains reusable, styled UI building blocks.
+* `/Frontend/src/utils/supabase/` - Contains the Supabase client configuration and utilities.
+* `/Requirement_Analysis/` - Contains project planning documents, user survey responses, and concept posters.
+
+## 🚀 Getting Started
+
+### Prerequisites
 Before you begin, ensure you have the following installed and set up on your system:  
 
 * **Python** (v3.10 or later recommended)  
@@ -35,29 +65,28 @@ Before you begin, ensure you have the following installed and set up on your sys
 * **TailwindCSS** (for styling the UI)
 * **(Recommended) use virtualenv
 
-## 🚀 Getting Started
-
+### Installation
 Follow these steps to get a local copy of the project up and running.
 
-### 1) Clone and navigate
+1. Clone and navigate
 ```bash
 git clone <your-repo-url>
 cd Coincious-Smart-Expense-Tracker/backend
 ```
 
-### 2) Create and activate a virtual environment
+2. Create and activate a virtual environment
 ```bash
 python -m venv venv
 source venv/bin/activate   # On macOS/Linux
 # .\venv\Scripts\activate  # On Windows (PowerShell)
 ```
 
-### 3) Install dependencies
+3. Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4) Configure environment variables
+4. Configure environment variables
 This project optionally uses Google Gemini for AI-based categorization when rules don’t match.
 
 Create a `.env` file (in the `backend/` directory) with:
@@ -67,14 +96,14 @@ GEMINI_API_KEY=your_gemini_api_key_here
 
 - If `GEMINI_API_KEY` is not set, the app will still run and fall back to a default category when rules don’t match.
 
-### 5) Run the server
+5. Run the server
 ```bash
 python app.py
 ```
 
 The Flask server starts on: http://localhost:8000
 
-### 6) Test the API
+6. Test the API
 Endpoint: `POST /api/categorize`
 
 Form fields accepted:
